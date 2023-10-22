@@ -49,12 +49,24 @@ The Games table will have the following columns:
 - id
 - name
 - gameState
-  - gameTurn
-  - gamePhase
-  - gameYear
-  - submitDeadline
-  - currentTerritories
-  - currentUnits
+- gameTurn
+- gamePhase
+- gameYear
+- submitDeadline
+- currentTerritories
+- currentUnits
+
+The Players table will have the following columns:
+
+- id
+- gameId
+- userId # null if AI
+- country
+- isReady
+- isEliminated
+- isWinner
+- isDraw
+- isAbandoned
 
 
 The Moves table will have the following columns:
@@ -76,18 +88,6 @@ The Messages table will have the following columns:
 - sentTimestamp
 - readTimestamp
 
-The Players table will have the following columns:
-
-- id
-- gameId
-- userId # null if AI
-- country
-- isReady
-- isEliminated
-- isWinner
-- isDraw
-- isAbandoned
-
 The GameSettings table will have the following columns:
 
 - id
@@ -95,14 +95,12 @@ The GameSettings table will have the following columns:
 - settingName
 - settingValue
 
-The UserSettings table will have the following rows:
+The UserSettings table will have the following columns:
 
-- defaultGameSettings
-- defaultGameName
-- defaultGamePassword
-- defaultGamePlayers
-- defaultGameMap
-- defaultGameIsPrivate
+- id
+- userId
+- settingName
+- settingValue
 
 #### GameSettings
 
@@ -118,12 +116,14 @@ The GameSettings table will have the following rows:
 
 #### UserSettings
 
-The UserSettings table will have the following columns:
+The UserSettings table will have the following rows:
 
-- id
-- userId
-- settingName
-- settingValue
+- defaultGameSettings
+- defaultGameName
+- defaultGamePassword
+- defaultGamePlayers
+- defaultGameMap
+- defaultGameIsPrivate
 
 ### Functions
 
