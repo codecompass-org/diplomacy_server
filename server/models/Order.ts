@@ -33,8 +33,8 @@ export class Order {
       this.moveTerritory = moveTerritory.toLowerCase();
       this.supportUnit = supportUnit;
       this.supportOrder = supportOrder;
-      this.supportTerritory = supportTerritory;
-      this.supportToTerritory = supportToTerritory;
+      this.supportTerritory = supportTerritory.toLowerCase();
+      this.supportToTerritory = supportToTerritory.toLowerCase();
   }
 
   getUnit(): string {
