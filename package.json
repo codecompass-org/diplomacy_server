@@ -4,7 +4,7 @@
   "description": "server and backend code for my diplomacy project",
   "main": "jest.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
